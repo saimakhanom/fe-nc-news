@@ -10,13 +10,13 @@ h2 {
 }
 
 .headerImgSlogan {
-    width: 420px;
-    height: 120px;
+    width: 250px;
+    height: 70px;
 }
 
 .headerImgBook {
-    width: 150px;
-    height: 110px;
+    width: 90px;
+    height: 60px;
 }
 
 .allArticlesContainer  {
@@ -30,13 +30,14 @@ h2 {
 
 .latestArticleImg {
     width: 70%;
+    border: 2px solid white;
     max-height: 500px;
 }
 
 .latestArticleContainer {
     display: flex;
     margin: auto;
-    gap: 1em;
+    gap: 1.5em;
     text-align: left;
     /* border: 2px solid black; */
 }
@@ -54,11 +55,23 @@ h2 {
 
 @media only screen and (min-width: 1200px) {
     .latestArticleImg {
-        width: 60%;
+        width: 50%;
     }
     
     .latestArticleContainer {
         align-items: center;
     }
 
+    .headerImgSlogan {
+        width: 300px;
+        height: 90px;
+    }
+    
+    .headerImgBook {
+        width: 110px;
+        height: 80px;
+    }
+    h2 {
+        margin-top: 0px;
+    }
 }

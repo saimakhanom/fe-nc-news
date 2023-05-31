@@ -12,7 +12,7 @@ export default function Home() {
       <div className="header">
         <img src={slogan} alt="nc news slogan reads breaking boundaries, breaking news" className="headerImgSlogan"/>
         <img src={bookImg} alt="open pink book icon" className="headerImgBook"/>
-          </div>
+      </div>
           <AllArticles/>
     </div>
   );
