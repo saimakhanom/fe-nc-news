@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    /* white-space: nowrap; */
+}
+
+.headerImgSlogan {
+    width: 490px;
+    height: 150px;
+}
+
+.headerImgBook {
+    width: 200px;
+    height: 150px;
+}

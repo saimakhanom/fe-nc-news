@@ -5,10 +5,10 @@ export default function NavLinks() {
 
     return (
         <div className="navLinks">
-            <Link to="/">Home</Link>
-            <Link to="/">Topic</Link>
-            <Link to="/">Topic</Link>
-            <Link to="/">Topic</Link>
+            <Link to="/" className="navLink">Home</Link>
+            <Link to="/" className="navLink">Topic</Link>
+            <Link to="/" className="navLink">Topic</Link>
+            <Link to="/" className="navLink">Topic</Link>
         </div>
     )
 }
