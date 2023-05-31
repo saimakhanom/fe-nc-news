@@ -1,0 +1,44 @@
+.logo {
+    width: 80px;
+    margin: 40px;
+}
+
+.profilePicture {
+    width: 50px;
+    height: 50px;
+}
+
+.logoAndLinks {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    /* border: 2px solid black; */
+}
+
+.navBar {
+    display: flex;
+    /* border: 2px solid black; */
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    margin: auto;
+    background-color: #ff6a60;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1em;
+    /* border: 2px solid black; */
+}
+
+.currentUser {
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    padding-right: 20px;
+    width: 150px;
+    /* inline-size: 150px; */
+    overflow-wrap: break-word;
+}
