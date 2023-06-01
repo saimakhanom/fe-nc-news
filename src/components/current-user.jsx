@@ -8,7 +8,7 @@ export default function CurrentUser() {
         alt="user profile picture"
         className="profilePicture"
       />
-      <p>Saima</p>
+      <p>Saima Khanom</p>
     </div>
   );
 }

@@ -11,9 +11,7 @@ body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  max-width: 1500px;
   min-height: 100vh;
-  background-color: grey;
   margin: auto;
 }
 
@@ -41,15 +39,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #f12c1e;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.divider {
+  border-bottom: 2px solid rgb(197, 196, 196);
 }

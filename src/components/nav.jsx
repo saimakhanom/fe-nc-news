@@ -5,12 +5,14 @@ import NavLinks from "./nav-links"
 
 export default function Nav() {
     return (
+        <div className="navBarContainer">
         <div className="navBar">
             <div className="logoAndLinks">
             <img src={logo} alt="nc news" className="logo" />
             <NavLinks />
             </div>
             <CurrentUser/>
+        </div>
         </div>
     )
 }

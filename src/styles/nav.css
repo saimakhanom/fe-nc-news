@@ -1,6 +1,6 @@
 .logo {
     width: 80px;
-    margin: 40px;
+    /* margin: 40px; */
 }
 
 .profilePicture {
@@ -15,15 +15,20 @@
     /* border: 2px solid black; */
 }
 
+.navBarContainer {
+    width: 100vw;
+    background-color: #ffa09a;
+}
+
 .navBar {
     display: flex;
+    max-width: 70%;
     /* border: 2px solid black; */
     height: 70px;
     justify-content: space-between;
     align-items: center;
     gap: 3em;
     margin: auto;
-    background-color: #ff6a60;
 }
 
 .navLinks {
@@ -35,10 +40,15 @@
 .currentUser {
     /* border: 2px solid black; */
     display: flex;
+    justify-content: right;
     align-items: center;
     gap: 0.7em;
     padding-right: 20px;
-    width: 150px;
+    width: 200px;
     /* inline-size: 150px; */
     overflow-wrap: break-word;
+}
+
+.navLink:hover {
+    color: white;
 }
