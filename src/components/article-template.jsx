@@ -7,14 +7,19 @@ import "../styles/article-template.css";
 
 export default function ArticleTemplate() {
   const [article, setArticle] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
   const { article_id } = useParams();
 
   useEffect(() => {
     fetchArticleBySlug(article_id).then((article) => {
-      console.log(article);
       setArticle(article);
+      setIsLoading(false)
     });
   }, [article_id]);
+
+  if (isLoading) {
+    return <p>Loading Article...</p>
+  }
 
   return (
     <div className="individualArticleContainer">
