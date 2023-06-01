@@ -5,8 +5,24 @@ const api = axios.create({
 })
 
 export const fetchAllArticles = () => {
-    return api.get('/articles')
+    return api.get('/articles').then((res) => {
+        return res.data.articles
+    })
 }
 export const fetchTopics = () => {
-    return api.get('/topics')
+    return api.get('/topics').then((res) => {
+        return res.data.topics
+    })
 }
+
+export const fetchArticleBySlug = (article_id) => {
+    return api
+      .get(`/articles/${article_id}`)
+      .then((res) => {
+        return res.data.article;
+      })
+      .catch((err) => {
+        return err;
+      });
+  };
+  

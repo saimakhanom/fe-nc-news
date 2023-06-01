@@ -12,7 +12,7 @@ export default function Articles({ articles }) {
             return;
           }
           return (
-            <Link to={`/${article.article_id}`} key={article.title}>
+            <Link to={`/articles/${article.article_id}`} key={article.title}>
               <div className="articleCardContainer">
                 <img
                   src={article.article_img_url}
