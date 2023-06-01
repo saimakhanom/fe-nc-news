@@ -7,7 +7,7 @@ export default function LatestArticlePreview({ latestArticle }) {
     <div className="latestArticle">
       <h2>Latest</h2>
       {latestArticle && (
-        <Link to={`/${latestArticle.article_id}`} className="latestArticleContainer">
+        <Link to={`/articles/${latestArticle.article_id}`} className="latestArticleContainer">
           <img
             src={latestArticle.article_img_url}
             alt=""

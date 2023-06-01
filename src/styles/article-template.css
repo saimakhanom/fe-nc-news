@@ -1,0 +1,41 @@
+.individualArticleContainer {
+    margin: auto;
+    width: 90%;
+}
+
+.articleImg {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+
+.shareBtn {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.shareBtnImg {
+    width: 45px;
+    height: 45px;
+}
+
+.shareBtn:hover {
+    cursor: pointer;
+    outline: 1px solid #ffa09a;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.shareAndAuthor {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+@media only screen and (min-width: 1200px) {
+    .individualArticleContainer img {
+        width: 50%;
+        display: inline;
+    }
+}
