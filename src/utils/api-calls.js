@@ -30,4 +30,22 @@ export const fetchCommentsByArticle = (article_id) => {
       .catch((err) => {
         return err;
       });
-  };
+};
+  
+export const postComment = (article_id, body) => {
+  // body needs username and body of comment, posted to correct article endpoint
+  // response
+  //   `comment_id: 19,
+  //     body: "This is the best comment ever written!",
+  //     article_id: 2,
+  //     votes: 0,
+  //     author: "icellusedkars",`;
+  return api
+    .post(`articles/${article_id}/comments`, body)
+    .then((res) => {
+      return res.data.comment;
+    })
+    .catch((err) => {
+      return err;
+    });
+};
