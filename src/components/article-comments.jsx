@@ -11,7 +11,7 @@ export default function ArticleComments({ article_id }) {
       setComments(data);
       setIsLoading(false);
     });
-  });
+  }, []);
 
   if (isLoading) {
     return <p>Loading comments...</p>;
