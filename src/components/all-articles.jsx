@@ -6,16 +6,21 @@ import Divider from "./divider";
 
 export default function AllArticles() {
     const [articles, setArticles] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         fetchAllArticles().then((res) => {
             setArticles(res.data.articles)
+            setIsLoading(false)
         }).catch((err) => {
             console.log(err)
         })
     }, [])
 
-    
+    if (isLoading) {
+        return <p>Loading articles...</p>
+    }
+
     return (
         <div className="allArticlesContainer">
             <LatestArticlePreview latestArticle={articles[0]} />
