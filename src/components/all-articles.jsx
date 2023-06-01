@@ -9,8 +9,8 @@ export default function AllArticles() {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        fetchAllArticles().then((res) => {
-            setArticles(res.data.articles)
+        fetchAllArticles().then((articles) => {
+            setArticles(articles)
             setIsLoading(false)
         }).catch((err) => {
             console.log(err)

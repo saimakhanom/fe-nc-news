@@ -7,8 +7,8 @@ export default function NavLinks() {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
-    fetchTopics().then((res) => {
-      setTopics(res.data.topics);
+    fetchTopics().then((topics) => {
+      setTopics(topics);
     });
   }, []);
 
