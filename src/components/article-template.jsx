@@ -4,6 +4,7 @@ import { fetchArticleBySlug } from "../utils/api-calls";
 import { formatDate } from "../utils/format-article-date";
 import share from "../assets/share.png";
 import "../styles/article-template.css";
+import ArticleComments from "./article-comments";
 
 export default function ArticleTemplate() {
   const [article, setArticle] = useState([]);
@@ -50,6 +51,7 @@ export default function ArticleTemplate() {
           <p>{article.body}</p>
         </div>
       )}
+      <ArticleComments article_id={article_id}/>
     </div>
   );
 }
