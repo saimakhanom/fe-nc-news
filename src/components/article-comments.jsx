@@ -4,6 +4,7 @@ import Comment from "./comment";
 import CommentAdder from "./comment-adder";
 
 export default function ArticleComments({ article_id, user }) {
+  const [deleted, setDeleted] = useState("")
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,7 +27,7 @@ export default function ArticleComments({ article_id, user }) {
         comments.map((comment) => {
           return (
             <div key={comment.comment_id}>
-              <Comment comment={comment} />
+              <Comment comment={comment} user={user} deleted={deleted} setDeleted={setDeleted}/>
             </div>
           );
         })}
