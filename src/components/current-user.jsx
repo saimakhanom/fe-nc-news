@@ -1,19 +1,19 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import profilePicture from "../assets/profile-picture.avif";
-import { UserContext } from "../../contexts/userContext";
 import { fetchUsers } from '../utils/api-calls';
 
 import "../styles/current-user.css"
 
-export default function CurrentUser() {
-  const {user, setUser } = useContext(UserContext)
+export default function CurrentUser({user, setUser}) {
+  
   const [users, setUsers] = useState([]);
   const [isLoading, setIsLoading] = useState(true)
   const [show, setShow] = useState(false)
 
   useEffect(() => {
     fetchUsers().then((data) => {
-        setUsers(data)
+      setUsers(data)
+      setIsLoading(false)
       })
   }, [])
 
@@ -28,6 +28,10 @@ export default function CurrentUser() {
   const selectUser = (user) => {
     setUser(user)
     setShow(false)
+  }
+
+  if (isLoading) {
+    return <p>Loading...</p>
   }
 
   return (

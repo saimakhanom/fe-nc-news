@@ -1,0 +1,22 @@
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.commentAdder input {
+    padding: 10px 15px;
+    width: 40%;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 1rem;
+}
+
+.commentAdder button {
+    background-color: #ffa09a;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin-left: 20px;
+    font-weight: 600;
+}

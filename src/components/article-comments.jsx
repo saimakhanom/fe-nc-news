@@ -3,7 +3,7 @@ import { fetchCommentsByArticle } from "../utils/api-calls";
 import Comment from "./comment";
 import CommentAdder from "./comment-adder";
 
-export default function ArticleComments({ article_id }) {
+export default function ArticleComments({ article_id, user }) {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,7 +21,7 @@ export default function ArticleComments({ article_id }) {
     <div>
       <h2>Comments</h2>
       <p>{comments.length} comments</p>
-      <CommentAdder article_id={article_id} setComments={setComments} />
+      <CommentAdder article_id={article_id} setComments={setComments} user={user}/>
       {comments.length > 0 &&
         comments.map((comment) => {
           return (

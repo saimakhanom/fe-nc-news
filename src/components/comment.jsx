@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { formatDate } from "../utils/format-article-date";
 import Divider from "./divider";
 
