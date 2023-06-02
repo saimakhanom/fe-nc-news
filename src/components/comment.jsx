@@ -1,7 +1,7 @@
 import { formatDate } from "../utils/format-article-date";
 import Divider from "./divider";
 
-export default function Comment({comment}) {
+export default function Comment({ comment }) {
 
     return (
         <div>

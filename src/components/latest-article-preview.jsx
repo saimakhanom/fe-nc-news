@@ -2,10 +2,12 @@ import { formatDate } from "../utils/format-article-date";
 import { capitaliseFirstLetter } from "../utils/capitalise-first-letter";
 import { Link } from "react-router-dom";
 
-export default function LatestArticlePreview({ latestArticle }) {
+export default function LatestArticlePreview({ latestArticle , topic_slug}) {
   return (
     <div className="latestArticle">
-      <h2>Latest</h2>
+      {topic_slug && <h2>Latest in {topic_slug}</h2>}
+      {!topic_slug && <h2>Latest</h2>}
+
       {latestArticle && (
         <Link to={`/articles/${latestArticle.article_id}`} className="latestArticleContainer">
           <img
