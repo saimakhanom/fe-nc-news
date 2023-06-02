@@ -14,8 +14,6 @@ export default function TopicPageTemplate() {
   const [isLoading, setIsLoading] = useState(true);
     const { topic_slug } = useParams();
     
-    console.log(isLoading)
-
   useEffect(() => {
     if (sortBy !== "comment_count") {
       fetchArticlesByTopic(topic_slug, sortBy, orderBy)
