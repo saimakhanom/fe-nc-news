@@ -40,6 +40,7 @@ export const postComment = (article_id, body) => {
   //     article_id: 2,
   //     votes: 0,
   //     author: "icellusedkars",`;
+  console.log(body)
   return api
     .post(`articles/${article_id}/comments`, body)
     .then((res) => {
@@ -49,3 +50,9 @@ export const postComment = (article_id, body) => {
       return err;
     });
 };
+
+export const fetchUsers = () => {
+  return api.get("/users").then((res) => {
+    return res.data.users;
+  });
+}
