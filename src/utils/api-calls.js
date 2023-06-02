@@ -30,4 +30,16 @@ export const fetchCommentsByArticle = (article_id) => {
       .catch((err) => {
         return err;
       });
-  };
+};
+  
+  
+export const fetchArticlesByTopic = (topic_slug) => {
+  return api
+    .get(`/articles?topic=${topic_slug.toLowerCase()}`)
+    .then((res) => {
+      return res.data.articles;
+    })
+    .catch((err) => {
+      return err;
+    });
+};
