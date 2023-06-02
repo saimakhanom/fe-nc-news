@@ -39,3 +39,13 @@
         display: inline;
     }
 }
+
+
+.author {
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }

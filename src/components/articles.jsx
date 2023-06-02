@@ -20,10 +20,11 @@ export default function Articles({ articles }) {
                 />
 
                 <div>
-                  <h3>{article.title}</h3>
+                  <h3 className="title">{article.title}</h3>
+                  <h4 className="author">By {article.author}</h4>
                   <p>
                     {formatDate(article.created_at)} |{" "}
-                    {capitaliseFirstLetter(article.topic)}
+                    {capitaliseFirstLetter(article.topic)} | {article.comment_count} comments | {article.votes} votes
                   </p>
                 </div>
               </div>

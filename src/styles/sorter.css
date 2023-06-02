@@ -1,0 +1,13 @@
+.sorter{
+    margin: 20px auto 20px 0px;
+}
+
+.dropdown {
+    margin-left: 10px;
+    padding: 3px;
+    font-size: 1em;
+}
+
+.orderBy {
+    margin-left: 20px;
+}
