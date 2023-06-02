@@ -4,8 +4,8 @@ const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
 
-export const fetchAllArticles = () => {
-  return api.get("/articles").then((res) => {
+export const fetchAllArticles = (sortBy, orderBy) => {
+  return api.get(`/articles?sort_by=${sortBy}&order=${orderBy}`).then((res) => {
     return res.data.articles;
   });
 };

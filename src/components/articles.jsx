@@ -23,7 +23,7 @@ export default function Articles({ articles }) {
                   <h3>{article.title}</h3>
                   <p>
                     {formatDate(article.created_at)} |{" "}
-                    {capitaliseFirstLetter(article.topic)}
+                    {capitaliseFirstLetter(article.topic)} | {article.comment_count} comments | {article.votes} votes
                   </p>
                 </div>
               </div>
