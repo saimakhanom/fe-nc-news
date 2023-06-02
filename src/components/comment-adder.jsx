@@ -12,13 +12,13 @@ export default function CommentAdder({ article_id, setComments, user }) {
     e.preventDefault();
     if (comment) {
       if (user.username !== "Log in") {
-        setError("");
-        setComment("");
-       setSuccess("Your comment has been posted!")
+        setSuccess("Your comment has been posted!")
         postComment(article_id, {
           username: user.username,
           body: comment,
         }).then((data) => {
+          setError("");
+          setComment("");
           setComments((prev) => {
             return [data, ...prev];
           }).catch(() => {

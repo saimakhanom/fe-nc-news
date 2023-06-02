@@ -5,7 +5,7 @@ import ArticleTemplate from "./components/article-template";
 import { useState } from "react";
 
 function App() {
-  const [user, setUser] = useState({ name: "Log in" });
+  const [user, setUser] = useState({ name: "Log in", username: "Log in" });
   
   return (
     <>

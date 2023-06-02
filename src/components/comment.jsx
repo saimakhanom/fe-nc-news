@@ -7,7 +7,6 @@ export default function Comment({ comment }) {
         <div>
             <p>{formatDate(comment.created_at)} | {comment.author}</p>
             <p>{comment.body}</p>
-            {/* <button onClick={()=>{deleteComment(comment.comment_id)}}>🗑️</button> */}
             <Divider/>
         </div>
     )
