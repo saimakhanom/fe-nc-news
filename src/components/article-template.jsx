@@ -8,7 +8,7 @@ import ArticleComments from "./article-comments";
 import Voter from "./voter";
 import "../styles/voter.css"
 
-export default function ArticleTemplate() {
+export default function ArticleTemplate({user}) {
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
@@ -64,7 +64,7 @@ export default function ArticleTemplate() {
           <p>{article.body}</p>
         </div>
       )}
-      <ArticleComments article_id={article_id} />
+      <ArticleComments article_id={article_id} user={user} />
     </div>
   );
 }

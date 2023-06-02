@@ -12,6 +12,7 @@ export default function TopicPageTemplate() {
     const { topic_slug } = useParams();
 
     useEffect(() => {
+        setIsLoading(true)
         fetchArticlesByTopic(topic_slug).then((data) => {
             setArticles(data)
             setIsLoading(false)
