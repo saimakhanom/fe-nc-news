@@ -3,6 +3,7 @@ import LatestArticlePreview from "./latest-article-preview";
 import { fetchAllArticles } from "../utils/api-calls";
 import Articles from "./articles";
 import Sorter from "./sorter";
+import { sortByCommentCount } from "../utils/sort-by-comment-count";
 
 export default function AllArticles() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,14 +12,18 @@ export default function AllArticles() {
   const [orderBy, setOrderBy] = useState("desc");
 
   useEffect(() => {
-    fetchAllArticles(sortBy, orderBy)
-      .then((articles) => {
-        setArticles(articles);
-        setIsLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (sortBy !== "comment_count") {
+      fetchAllArticles(sortBy, orderBy)
+        .then((articles) => {
+          setArticles(articles);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      sortByCommentCount(setArticles, orderBy);
+    }
   }, [sortBy, orderBy]);
 
   if (isLoading) {
@@ -28,7 +33,7 @@ export default function AllArticles() {
   return (
     <div className="allArticlesContainer">
       <LatestArticlePreview latestArticle={articles[0]} />
-      <Sorter setSortBy={setSortBy} setOrderBy={setOrderBy}/>
+      <Sorter setSortBy={setSortBy} setOrderBy={setOrderBy} />
       <Articles articles={articles} />
     </div>
   );
