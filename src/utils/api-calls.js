@@ -22,20 +22,32 @@ export const fetchArticleBySlug = (article_id) => {
 };
 
 export const fetchCommentsByArticle = (article_id) => {
+    return api
+      .get(`/articles/${article_id}/comments`)
+      .then((res) => {
+        return res.data.comments;
+      })
+      .catch((err) => {
+        return err;
+      });
+};
+  
+export const postComment = (article_id, body) => {
+  console.log(body)
   return api
-    .get(`/articles/${article_id}/comments`)
+    .post(`articles/${article_id}/comments`, body)
     .then((res) => {
-      return res.data.comments;
-    })
-    .catch((err) => {
-      return err;
+      return res.data.comment;
     });
 };
 
+export const fetchUsers = () => {
+  return api.get("/users").then((res) => {
+    return res.data.users;
+  });
+}
 export const patchArticleVote = (article_id, body) => {
-  // body should contain key of inc_votes with a positive or negative number
   return api.patch(`articles/${article_id}`, body).then((res) => {
-    console.log(res.data.article.votes)
     return res.data.article;
   });
 };

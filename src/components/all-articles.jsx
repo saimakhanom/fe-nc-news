@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useContext } from "react";
 import LatestArticlePreview from "./latest-article-preview";
 import { fetchAllArticles } from "../utils/api-calls";
 import Articles from "./articles";
@@ -11,7 +10,6 @@ export default function AllArticles() {
 
 
   useEffect(() => {
-    console.log("test")
     fetchAllArticles()
       .then((articles) => {
         setArticles(articles);

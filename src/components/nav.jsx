@@ -3,7 +3,7 @@ import "../styles/nav.css"
 import CurrentUser from "./current-user"
 import NavLinks from "./nav-links"
 
-export default function Nav() {
+export default function Nav({user, setUser}) {
     return (
         <div className="navBarContainer">
         <div className="navBar">
@@ -11,7 +11,7 @@ export default function Nav() {
             <img src={logo} alt="nc news" className="logo" />
             <NavLinks />
             </div>
-            <CurrentUser/>
+                <CurrentUser user={user} setUser={setUser} />
         </div>
         </div>
     )
