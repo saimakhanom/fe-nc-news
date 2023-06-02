@@ -1,7 +1,7 @@
-import { useState } from "react";
 import { deleteComment } from "../utils/api-calls";
 import { formatDate } from "../utils/format-article-date";
 import Divider from "./divider";
+import "../styles/delete-comment.css"
 
 export default function Comment({ comment, user, setDeleted, deleted }) {
   const handleDelete = (comment_id) => {
@@ -24,7 +24,7 @@ export default function Comment({ comment, user, setDeleted, deleted }) {
           </p>
           <p>{comment.body}</p>
           {user.username === comment.author && (
-            <button
+            <button className="deleteBtn"
               onClick={() => {
                 handleDelete(comment.comment_id);
               }}
