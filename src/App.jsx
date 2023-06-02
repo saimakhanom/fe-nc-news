@@ -6,12 +6,12 @@ import ArticleTemplate from "./components/article-template";
 function App() {
   return (
     <>
-      <Nav/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/articles/:article_id" element={<ArticleTemplate/>}/>
-      </Routes>
+      <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/articles/:article_id" element={<ArticleTemplate />} />
+        </Routes>
     </>
   );
 }
