@@ -20,3 +20,12 @@
     margin-left: 20px;
     font-weight: 600;
 }
+
+.commentAdder button:hover {
+color: white;
+cursor: pointer;
+}
+
+.commentAdder button:active {
+color: black;
+}

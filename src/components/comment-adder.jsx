@@ -8,8 +8,8 @@ export default function CommentAdder({ article_id, setComments, user }) {
   const [success, setSuccess] = useState("");
 
   const handleSubmit = (e) => {
+    console.log(user)
     e.preventDefault();
-    console.log(user);
     if (comment) {
       if (user.username !== "Log in") {
         setError("");

@@ -9,12 +9,12 @@ function App() {
   
   return (
     <>
-      <Nav user={user} setUser={setUser} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/articles/:article_id" element={<ArticleTemplate user={user}/>}/>
-      </Routes>
+      <Nav user={user} setUser={setUser}/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+        <Route path="/articles/:article_id" element={<ArticleTemplate user={user} />} />
+        </Routes>
     </>
   );
 }

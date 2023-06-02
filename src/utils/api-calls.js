@@ -20,7 +20,7 @@ export const fetchArticleBySlug = (article_id) => {
     return res.data.article;
   });
 };
-   
+
 export const fetchCommentsByArticle = (article_id) => {
     return api
       .get(`/articles/${article_id}/comments`)
@@ -45,9 +45,6 @@ export const postComment = (article_id, body) => {
     .post(`articles/${article_id}/comments`, body)
     .then((res) => {
       return res.data.comment;
-    })
-    .catch((err) => {
-      return err;
     });
 };
 
@@ -56,3 +53,9 @@ export const fetchUsers = () => {
     return res.data.users;
   });
 }
+export const patchArticleVote = (article_id, body) => {
+  // body should contain key of inc_votes with a positive or negative number
+  return api.patch(`articles/${article_id}`, body).then((res) => {
+    return res.data.article;
+  });
+};
