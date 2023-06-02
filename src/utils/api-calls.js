@@ -33,13 +33,6 @@ export const fetchCommentsByArticle = (article_id) => {
 };
   
 export const postComment = (article_id, body) => {
-  // body needs username and body of comment, posted to correct article endpoint
-  // response
-  //   `comment_id: 19,
-  //     body: "This is the best comment ever written!",
-  //     article_id: 2,
-  //     votes: 0,
-  //     author: "icellusedkars",`;
   console.log(body)
   return api
     .post(`articles/${article_id}/comments`, body)
@@ -54,7 +47,6 @@ export const fetchUsers = () => {
   });
 }
 export const patchArticleVote = (article_id, body) => {
-  // body should contain key of inc_votes with a positive or negative number
   return api.patch(`articles/${article_id}`, body).then((res) => {
     return res.data.article;
   });
