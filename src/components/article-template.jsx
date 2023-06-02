@@ -6,21 +6,19 @@ import share from "../assets/share.png";
 import "../styles/article-template.css";
 import ArticleComments from "./article-comments";
 import Voter from "./voter";
-import { ArticlesContext } from "../contexts/articles-context";
 import "../styles/voter.css"
 
 export default function ArticleTemplate() {
   const [article, setArticle] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const { article_id } = useParams();
-  const { articles } = useContext(ArticlesContext);
 
   useEffect(() => {
     fetchArticleBySlug(article_id).then((article) => {
       setArticle(article);
       setIsLoading(false);
     });
-  }, [article_id, articles]);
+  }, [article_id]);
 
   if (isLoading) {
     return <p>Loading Article...</p>;
@@ -54,9 +52,8 @@ export default function ArticleTemplate() {
             <div className="voterContainer">
               <p>
                 {formatDate(article.created_at)} | {article.topic} |{" "}
-                {article.votes} votes
               </p>
-              <Voter article_id={article_id} />
+              <Voter article_id={article_id} initialVotes={article.votes}/>
             </div>
           </div>
           <img

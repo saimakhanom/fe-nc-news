@@ -1,6 +1,12 @@
 .voterContainer {
     display: flex;
+    gap: 0.4em;
+}
+
+.voter {
+    display: flex;
     gap: 1em;
+    margin-bottom: 20px;
 }
 
 .voterBtn {
