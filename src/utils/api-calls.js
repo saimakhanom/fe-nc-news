@@ -60,3 +60,33 @@ export const patchArticleVote = (article_id, body) => {
     return res.data.article;
   });
 };
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const deleteComment = (comment_id) => {
+  return api
+    .delete(`/comments/${comment_id}`)
+    .then(() => {
+      return "Comment deleted";
+    })
+    .catch((err) => {
+      return err;
+    });
+};
